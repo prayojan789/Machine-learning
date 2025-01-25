@@ -66,10 +66,10 @@ if uploaded_image is not None:
         st.image(resized_img, caption="Uploaded Image")
 
     with col2:
-        # if st.button("Classify"):
-        #     try:
-        #         # Predict the class of the uploaded image
-        #         prediction = predict_image_class(model, uploaded_image, class_indices)
-        #         st.success(f"Prediction: {prediction}")
-        #     except Exception as e:
-        #         st.error(f"Error during prediction: {str(e)}")
+        if st.button("Classify"):
+            try:
+                # Predict the class of the uploaded image
+                prediction = predict_image_class(model, uploaded_image, class_indices)
+                st.success(f"Prediction: {prediction}")
+            except Exception as e:
+                st.error(f"Error during prediction: {str(e)}")
