@@ -15,11 +15,11 @@ model_path = os.path.join(working_dir, "trained_model", "DSML_PROJECT.h5")
 class_indices_path = os.path.join(working_dir, "class_indices.json")
 
 # Load the pre-trained model
-# try:
-#     model = tf.keras.models.load_model(model_path)
-# except FileNotFoundError:
-#     st.error("Error: Model file not found. Please ensure 'DSML_PROJECT.h5' exists in the 'trained_model' directory.")
-#     st.stop()
+try:
+    model = tf.keras.models.load_model(model_path)
+except FileNotFoundError:
+    st.error("Error: Model file not found. Please ensure 'DSML_PROJECT.h5' exists in the 'trained_model' directory.")
+    st.stop()
 
 # Load class indices
 try:
