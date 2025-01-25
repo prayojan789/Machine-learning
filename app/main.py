@@ -34,8 +34,8 @@ def load_and_preprocess_image(image, target_size=(224, 224)):
     # Convert uploaded file to an image
     img = Image.open(image)
     # Resize the image
-    # img = img.resize(target_size)
-    # # Convert the image to a numpy array
+    img = img.resize(target_size)
+    # Convert the image to a numpy array
     img_array = np.array(img)
     # Add batch dimension
     img_array = np.expand_dims(img_array, axis=0)
